@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
     <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/custon.css}" rel="stylesheet" />
     
     <script th:src="@{/js/jquery/jquery-3.3.1.slim.min.js}" ></script>
     <script th:src="@{/js/popper/popper.min.js}" ></script>
@@ -13,25 +14,35 @@
 <body>
 	<br >
 	<div class="center-block">
-		
 		<div class="container">
-			<div th:if="${usuarios != null}">
-			    <table th:object="${usuarios}" id="userTable" class="table table-dark">
-			    	<thead>
-				    	<tr>
-			    			<th scope="col">ID</th>
-			    			<th scope="col">NOME</th>
-			    			<th scope="col">EMAIL</th>
-				    	</tr>
-			    	</thead>
-			    	<tbody>
-					    <tr th:each="user :${usuarios}">
-					        <td scope="row" th:text="${user.id}"></td>
-					        <td  th:text="${user.name}"></td>
-					        <td  th:text="${user.email}"></td>
-					    </tr>
-			    	</tbody>
-				</table>
+			
+			<div class="row text-center">
+				<div class="col-md-12">
+					<h4>Lista de usuários</h4>
+				</div>
+			</div>
+			<br >
+			<div class="row custon-centered custon-width-box">
+				<div class="col-md-12">
+					<div th:if="${usuarios != null}">
+					    <table th:object="${usuarios}" id="userTable" class="table table-dark">
+					    	<thead>
+						    	<tr>
+					    			<th scope="col">Id</th>
+					    			<th scope="col">Nome</th>
+					    			<th scope="col">Email</th>
+						    	</tr>
+					    	</thead>
+					    	<tbody>
+							    <tr th:each="user :${usuarios}">
+							        <td scope="row" th:text="${user.id}"></td>
+							        <td  th:text="${user.name}"></td>
+							        <td  th:text="${user.email}"></td>
+							    </tr>
+					    	</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

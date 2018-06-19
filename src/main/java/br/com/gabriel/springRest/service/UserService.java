@@ -3,12 +3,12 @@ package br.com.gabriel.springRest.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import br.com.gabriel.springRest.model.User;
 import br.com.gabriel.springRest.repository.UserRepository;
 
-@Component
+@Service
 public class UserService {
 
 	@Autowired

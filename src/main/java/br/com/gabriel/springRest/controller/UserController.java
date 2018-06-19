@@ -23,7 +23,7 @@ public class UserController {
 
 	service.save( user );
 	model.addAttribute( "message", "Usuário salvo com sucesso" );
-	return "success";
+	return "redirect:/user/all";
     }
 
     @GetMapping( path = "/new" )
