@@ -23,18 +23,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<!-- JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		
+
 		<!-- VIEW -->
 		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+
 
 		<!-- Mysql -->
 		<dependency>
@@ -42,7 +44,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>spring-rest</finalName>
 
@@ -61,7 +63,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	
+
 	</build>
 
 	<repositories>

@@ -1,4 +1,4 @@
-package br.com.gabriel.springRest.business;
+package br.com.gabriel.springRest.service;
 
 import java.util.List;
 
@@ -24,7 +24,8 @@ public class UserService {
 	}
 
 	public void save(User user) {
-		userRepository.save(user);
-	}
+
+	userRepository.save( user );
+    }
 
 }

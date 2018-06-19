@@ -1,0 +1,20 @@
+package br.com.gabriel.springRest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class HelloController {
+
+    @GetMapping( path = {"/hello","/"} )
+    public String pageStatic (
+		    @RequestParam( name = "name", required = false, defaultValue = "Visitante" ) String name,
+		    Model model ) {
+
+	model.addAttribute( "name", name );
+	return "hello";
+    }
+    
+}
