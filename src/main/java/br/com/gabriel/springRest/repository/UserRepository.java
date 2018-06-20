@@ -6,7 +6,9 @@ import org.springframework.stereotype.Repository;
 import br.com.gabriel.springRest.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository< User, Long > {
+public interface UserRepository extends JpaRepository< User, Integer > {
 
     User findByName ( String name );
+
+    void deleteById ( Integer id );
 }

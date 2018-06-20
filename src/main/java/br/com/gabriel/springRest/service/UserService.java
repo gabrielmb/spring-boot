@@ -11,21 +11,27 @@ import br.com.gabriel.springRest.repository.UserRepository;
 @Service
 public class UserService {
 
-	@Autowired
-	private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-	public String addNewUser(User user) {
+    public String addNewUser ( User user ) {
 
-		return "Saved";
-	}
+	return "Saved";
+    }
 
-	public List<User> findAll() {
-		return userRepository.findAll();
-	}
+    public List< User > findAll ( ) {
 
-	public void save(User user) {
+	return userRepository.findAll( );
+    }
+
+    public void save ( User user ) {
 
 	userRepository.save( user );
+    }
+
+    public void removeUser ( Integer idUser ) {
+
+	userRepository.deleteById( idUser );
     }
 
 }

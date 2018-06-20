@@ -15,19 +15,24 @@
 	<br >
 	<div class="center-block">
 		<div class="container">
-			
+			<p th:include="fragments/menu"></p>
+			<br >
 			<div class="row text-center">
 				<div class="col-md-12">
 					<h4>Lista de usuários</h4>
 				</div>
 			</div>
 			<br >
+			<br >
+			<p th:text="${message}"></p>
+			<br >
 			<div class="row custon-centered custon-width-box">
 				<div class="col-md-12">
 					<div th:if="${usuarios != null}">
-					    <table th:object="${usuarios}" id="userTable" class="table table-dark">
+					    <table th:object="${usuarios}" id="userTable" class="table table-striped">
 					    	<thead>
 						    	<tr>
+						    		<th scope="col">Ação</th>
 					    			<th scope="col">Id</th>
 					    			<th scope="col">Nome</th>
 					    			<th scope="col">Email</th>
@@ -35,6 +40,7 @@
 					    	</thead>
 					    	<tbody>
 							    <tr th:each="user :${usuarios}">
+							    	<td><a th:href="@{'/user/remove/'+${user.id}}"> Remover</a></td>
 							        <td scope="row" th:text="${user.id}"></td>
 							        <td  th:text="${user.name}"></td>
 							        <td  th:text="${user.email}"></td>
